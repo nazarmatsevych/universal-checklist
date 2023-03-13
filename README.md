@@ -142,3 +142,55 @@ and let content dictate the container size.
 
 12. [STYLES] - Don't add new border to the element on hover. Add default
 transparent border of the same width, and change its color on `:hover`
+
+
+13. [BEM & STYLES] - Don't add external styles (positioning or margins) to
+   BEM-blocks. Use mix where necessary and move all external styles under element
+   selector.
+
+GOOD example
+```html
+<!--index.html-->
+<div class="container">
+  <div class="container__card card">
+    ...
+  </div>
+</div>
+```
+```css
+/*style.css*/
+.container__card {
+  margin: 48px 24px;
+}
+
+.card {
+  font-size: 16px;
+  background-color: purple;
+}
+```
+
+BAD example
+```html
+<!--index.html-->
+<div class="container">
+  <div class="card">
+    ...
+  </div>
+</div>
+```
+```css
+/*style.css*/
+.card {
+  margin: 48px 24px;
+  font-size: 16px;
+  background-color: purple;
+}
+```
+
+
+14. [SASS] - use variables for the main values so that you'll be able to reuse
+    them and give them descriptive names. But don't overuse them, don't create
+    variable for the value that's used just once.
+15. [SASS] - Try to use different features - mixins etc - where it makes sense.
+16. [CODE STYLE] - Remember about styles properties order - ([css order](https://codeguide.academy/html-css.html#css-order))
+
