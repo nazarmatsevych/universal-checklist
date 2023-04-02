@@ -193,4 +193,5 @@ BAD example
     variable for the value that's used just once.
 15. [SASS] - Try to use different features - mixins etc - where it makes sense.
 16. [CODE STYLE] - Remember about styles properties order - ([css order](https://codeguide.academy/html-css.html#css-order))
+17. [CODE KNOWLEDGE] - Make sure to add transition style under general selector, not the one with :hover - this way transition will work smoothly both ways.
 
